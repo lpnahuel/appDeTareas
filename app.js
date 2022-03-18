@@ -31,7 +31,7 @@ switch(accion) {
 
     case undefined:
         console.log();    
-        console.log('Atención - Tienes que pasarme una acción');
+        console.log('Atención - Tienes que pasarme una acción'); 
         console.log('Las acciones disponibles son: listar');
         console.log('----------------------------------------');
         break;
