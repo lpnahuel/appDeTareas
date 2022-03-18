@@ -5,6 +5,7 @@ Nuevos ciclos
 Filtrar tareas
 Agregar tareas
 Agregar los casos al switch
+
 Nuevos Ciclos
 Ya hemos visto otras formas de ciclar en un array, vimos el for, foreach, map, reduce, filter y for of. Hasta ahora hemos utilizado el for para ciclar en los arrays, pero ahora necesitamos utilizar el foreach.
 
