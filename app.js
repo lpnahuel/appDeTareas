@@ -9,11 +9,18 @@ switch(accion) {
         console.log('Listado de tareas');
         console.log('------------------');
         let tareas = archivoTareas.leerArchivo();
-        for (let i = 0;  i < tareas.length; i++) {
-            console.log((i + 1) +'. ' + tareas[i].titulo + ' - ' + tareas[i].estado);
-        }
-        console.log()
+        tareas.forEach((element, i) => {
+            console.log ((i + 1) + ". " + element.titulo + " - " + element.estado)
+        });
         break;
+    case "crear":
+        let tituloNuevaTarea = process.arv[3]; 
+        let nuevaTarea = {
+            titulo: tituloNuevaTarea,
+            estado: "pendiente"
+        }
+        archivoTareas.guardarTarea(nuevaTarea); 
+        break; 
 
     case undefined:
         console.log();    
