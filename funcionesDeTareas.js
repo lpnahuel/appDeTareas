@@ -16,6 +16,13 @@ let archivoTareas = {
         tareas.push(tarea);
         this.escribirJSON(tareas);
 
+    },
+    filtrarPorEstado: function(estadoBuscado){
+        let tareas = this.leerArchivo();
+        let leerPorEstado = tareas.filter(function(tareas){
+            return tareas.estado === estadoBuscado
+        });
+        return leerPorEstado;        
     }
 }
 module.exports = archivoTareas;
