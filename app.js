@@ -14,13 +14,20 @@ switch(accion) {
         });
         break;
     case "crear":
-        let tituloNuevaTarea = process.arv[3]; 
+        let tituloNuevaTarea = process.argv[3]; 
         let nuevaTarea = {
             titulo: tituloNuevaTarea,
             estado: "pendiente"
         }
         archivoTareas.guardarTarea(nuevaTarea); 
-        break; 
+        break;
+    case "filtrar":
+        let estadoBuscado = process.argv[3];
+        let tareasFiltradas = archivoTareas.filtrarPorEstado(estadoBuscado)
+        tareasFiltradas.forEach((element, i) => {
+            console.log((i + 1) + ". " + element.titulo + " - " + element.estado);
+        });
+        break;
 
     case undefined:
         console.log();    
